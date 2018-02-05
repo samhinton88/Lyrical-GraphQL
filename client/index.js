@@ -1,16 +1,24 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Router, Route, hashHistory, IndexRoute } from 'react-router';
 import ApolloClient from 'apollo-client';
 import { ApolloProvider } from 'react-apollo';
 
-import SongList from './components/SongList'
+import App from './components/app';
+import SongList from './components/SongList';
+
 
 const client = new ApolloClient({});
 
 const Root = () => {
   return (
+    // apolloprovider wraps router
     <ApolloProvider client={client}>
-      <SongList />
+      <Router history={hashHistory}>
+        <Route path="/" component={App}>
+          <IndexRoute component={SongList}/>
+        </Route>
+      </Router>
     </ApolloProvider>
   )
 };
