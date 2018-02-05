@@ -1,6 +1,10 @@
 import React, { Component } from 'react';
 
+
 class SongDetail extends Component {
+
+
+
   render() {
     return (
       <div>
@@ -9,5 +13,7 @@ class SongDetail extends Component {
     )
   }
 }
+
+
 
 export default SongDetail
