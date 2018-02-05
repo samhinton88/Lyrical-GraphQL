@@ -19,15 +19,15 @@ class SongList extends Component {
   render() {
     return (
       <div>
-      <ul className="collection">
-        {this.renderSongs()}
-      </ul>
-      <Link
-       to="/songs/new"
-       className="btn-floating btn-large red right"
-      >
-        <i className="material-icons">add</i>
-      </Link>
+        <ul className="collection">
+          {this.renderSongs()}
+        </ul>
+        <Link
+         to="/songs/new"
+         className="btn-floating btn-large red right"
+        >
+          <i className="material-icons">add</i>
+        </Link>
       </div>
     )
   }
