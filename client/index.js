@@ -10,8 +10,10 @@ import SongList from './components/SongList';
 import SongCreate from './components/SongCreate';
 import SongDetail from './components/SongDetail';
 
-
-const client = new ApolloClient({});
+// o => o.id --- fetch all data you need, use id field to identify each piece of data
+const client = new ApolloClient({
+  dataIdFromObject: o => o.id
+});
 
 const Root = () => {
   return (
